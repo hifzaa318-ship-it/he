@@ -12,7 +12,7 @@ body{
     font-family: Arial, sans-serif;
     text-align:center;
     color:white;
-    overflow-x:hidden; /* Allows vertical scroll */
+    overflow-x:hidden;
 }
 
 /* Glowing Text */
@@ -80,24 +80,10 @@ button:hover{
 .no{
     background:black;
     color:white;
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 </style>
-
-<script>
-function moveNo(){
-    var btn = document.getElementById("noBtn");
-
-    btn.style.position = "fixed";
-    btn.style.top = Math.random()*70 + "vh";
-    btn.style.left = Math.random()*70 + "vw";
-
-    // Return near YES after 2 seconds
-    setTimeout(function(){
-        btn.style.position = "static";
-    },2000);
-}
-</script>
-
 </head>
 
 <body>
@@ -136,8 +122,15 @@ Will you make this Valentine's day extra special by being mine Forever? 💍💖
 YES 💘
 </button>
 
-<button id="noBtn" class="no" onmouseover="moveNo()">
+<button id="noBtn" class="no">
 NO 😜
+</button>
+
+<br><br>
+
+<!-- Memories Button -->
+<button onclick="window.location.href='memories.html'">
+Not over yet,Click here💖
 </button>
 
 <br><br>
@@ -145,11 +138,9 @@ NO 😜
 <footer>
 Made with endless love by Your Headache 💗
 </footer>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<br><br><br><br><br>
+
 <!-- Floating Hearts -->
 <div class="floating" style="left:10%; animation-delay:0s;">❤️</div>
 <div class="floating" style="left:25%; animation-delay:2s;">💖</div>
@@ -157,6 +148,28 @@ Made with endless love by Your Headache 💗
 <div class="floating" style="left:60%; animation-delay:1s;">💗</div>
 <div class="floating" style="left:75%; animation-delay:3s;">💘</div>
 <div class="floating" style="left:90%; animation-delay:5s;">❤️</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("click", moveButton);
+noBtn.addEventListener("touchstart", moveButton); // important for mobile
+
+function moveButton(e){
+    e.preventDefault();
+
+    noBtn.style.position = "fixed";
+
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+</script>
 
 </body>
 </html>
