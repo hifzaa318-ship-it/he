@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Sweet Moments 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* Body Styling */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    background-size: 300% 300%;
+    animation: gradientMove 8s infinite alternate;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+/* Heading */
+h1{
+    margin-top:30px;
+    color:white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Image container */
+.image-box{
+    display:inline-block;
+    margin:20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Image styling */
+.image-box img{
+    width:250px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+/* Image hover effect */
+.image-box img:hover{
+    transform:scale(1.05);
+}
+
+/* Caption */
+.caption{
+    margin-top:10px;
+    font-size:16px;
+    color:white;
+}
+
+/* Button */
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#ff4e88;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4e88;
+    color:white;
+    transform:scale(1.1);
+}
+
+/* Floating hearts */
+.floating{
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+}
+
+/* Floating animation */
+@keyframes floatUp{
+    0%{
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Our Sweet Moments 💖</h1>
+
+<!-- Images with captions -->
+<div class="image-box">
+    <img src="photo2.jpeg">
+    <div class="caption">My favourite photo, my favourite person🌸</div>
+</div>
+<br>
+<div class="image-box">
+    <img src="photo3.jpeg">
+    <div class="caption">With you,everything feels right 💕</div>
+</div>
+<br>
+<div class="image-box">
+    <img src="photo4.jpeg">
+    <div class="caption">Our first photo ❤️</div>
+</div><br>
+<div class="image-box">
+    <img src="photo5.jpeg">
+    <div class="caption">This careless boy cares a lot about me 💗</div>
+</div><br>
+
+<div class="image-box">
+    <img src="photo1.jpeg">
+    <div class="caption">Happiness, captured💖</div>
+</div>
+<br><br>
+
+<a href="index.html">
+    <button>Go Back ❤️</button>
+</a>
+<br><br>
+
+<!-- Floating Hearts -->
+<div class="floating" style="left:10%; animation-delay:0s;">❤️</div>
+<div class="floating" style="left:25%; animation-delay:2s;">💖</div>
+<div class="floating" style="left:40%; animation-delay:4s;">💕</div>
+<div class="floating" style="left:60%; animation-delay:1s;">💗</div>
+<div class="floating" style="left:75%; animation-delay:3s;">💘</div>
+<div class="floating" style="left:90%; animation-delay:5s;">❤️</div>
+
+</body>
+</html>
